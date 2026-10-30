@@ -162,8 +162,23 @@ print("Most frequently recorded product:")
 print(most_frequent_product)
 
 
+# Find the highest product frequency
+product_frequency = df["Product"].value_counts()
 
+highest_count = product_frequency.max()
 
+print("Highest number of sales records:")
+print(highest_count)
+
+# Find all products tied for highest frequency
+product_frequency = df["Product"].value_counts()
+
+highest_count = product_frequency.max()
+
+top_products = product_frequency[product_frequency == highest_count]
+
+print("Products with the highest frequency:")
+print(top_products)
 
 
 
