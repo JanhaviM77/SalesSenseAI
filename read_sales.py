@@ -149,3 +149,22 @@ total_unique_products = df["Product"].nunique()
 print("Total number of unique products:")
 print(total_unique_products)
       
+# Count how many times each product appears
+product_frequency = df["Product"].value_counts()
+
+print("Product frequency:")
+print(product_frequency)
+
+# Find the most frequently recorded product
+most_frequent_product = df["Product"].value_counts().idxmax()
+
+print("Most frequently recorded product:")
+print(most_frequent_product)
+
+
+
+
+
+
+
+
