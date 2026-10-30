@@ -180,6 +180,18 @@ top_products = product_frequency[product_frequency == highest_count]
 print("Products with the highest frequency:")
 print(top_products)
 
+# Filter multiple products using isin()
+selected_products = df[df["Product"].isin(["Toy car", "Teddy bear"])]
 
+print("Selected products:")
+print(selected_products)
+
+
+# Exclude multiple products using isin()
+
+excluded_products = df[~df["Product"].isin(["Toy car", "Teddy bear"])]
+
+print("Products after excluding Toy car and Teddy bear:")
+print(excluded_products)
 
 
