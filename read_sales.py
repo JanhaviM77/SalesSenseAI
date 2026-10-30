@@ -112,9 +112,17 @@ product_Summery = df.groupby("Product")[["Sales","Profit"]].sum()
 print("Sales and Profit Summary:")
 print(product_Summery)
 
+#calculate average sales for each product 
+average_sales = df.groupby("Product")["Sales"].mean()
 
+print("Average Sales of each product is :")
+print(average_sales)
 
+# Calculate average sales and profit for each product
+average_summary = df.groupby("Product")[["Sales", "Profit"]].mean()
 
+print("Average Sales and Profit for each product:")
+print(average_summary)
 
 
 
