@@ -124,11 +124,17 @@ average_summary = df.groupby("Product")[["Sales", "Profit"]].mean()
 print("Average Sales and Profit for each product:")
 print(average_summary)
 
+# Count sales record for each product
+product_count = df.groupby("Product").size()
+print("Number of Sales for Each product : ")
+print(product_count)
 
 
+# Count non-missing Profit values for each product
+profit_count = df.groupby("Product")["Profit"].count()
 
-
-
+print("Number of available Profit values:")
+print(profit_count)
 
 
 
