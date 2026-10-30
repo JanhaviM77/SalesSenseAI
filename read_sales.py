@@ -137,7 +137,15 @@ print("Number of available Profit values:")
 print(profit_count)
 
 
+# Find unique products
+unique_products = df["Product"].unique()
 
+print("Unique products in our shop:")
+print(unique_products)
 
+# Count the number of unique products
+total_unique_products = df["Product"].nunique()
 
+print("Total number of unique products:")
+print(total_unique_products)
       
