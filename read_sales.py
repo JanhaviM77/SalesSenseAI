@@ -206,3 +206,28 @@ print(missing_Values)
 missing_count = df.isnull().sum()
 print("Missing value in each column :")
 print(missing_count)
+
+#lesson 18 - fillna()  Practice filling missing values.. we are not making any changes in csv file - that is why it is practice example.
+
+import pandas as pd
+practice_profit = pd.Series([50, None, 30, 70, 40])
+print("Before filling missing values: ")
+print(practice_profit)
+
+filled_profit = practice_profit.fillna(0)
+print("After filling missing value:")
+print(filled_profit)
+
+
+# Lesson 18 - Fill missing values with average
+practice_profit = pd.Series([50, None, 30, 70, 40])
+
+average_profit = practice_profit.mean()
+
+filled_average = practice_profit.fillna(average_profit)
+
+print("Average Profit:")
+print(average_profit)
+
+print("Profit after filling missing values:")
+print(filled_average)
