@@ -195,3 +195,14 @@ print("Products after excluding Toy car and Teddy bear:")
 print(excluded_products)
 
 
+# check for missing value in sales data
+
+missing_Values = df.isnull()
+
+print("Missing value in our sales data :")
+print(missing_Values)
+
+# Count missing values in each column
+missing_count = df.isnull().sum()
+print("Missing value in each column :")
+print(missing_count)
