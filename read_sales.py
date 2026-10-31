@@ -231,3 +231,33 @@ print(average_profit)
 
 print("Profit after filling missing values:")
 print(filled_average)
+
+#lesson 19 - create calculated column
+df["Profit_Percentage"] = (
+    df["Profit"] / df["Sales"]
+) * 100
+
+df["Profit_Percentage"] =df["Profit_Percentage"].round(2)
+
+print("Sales data with Profit Percentage:")
+print(df[["Product", "Sales", "Profit", "Profit_Percentage"]])
+
+
+# Lesson 19 Part 2 - Create Profit Status
+df["Profit_Status"] = "Low"
+
+df.loc[df["Profit_Percentage"] >= 30, "Profit_Status"] = "High"
+
+print("Sales data with Profit Status:")
+print(df[["Product", "Profit_Percentage", "Profit_Status"]])
+
+
+
+
+
+
+
+
+
+
+
