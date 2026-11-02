@@ -63,6 +63,6 @@ print("Final Report Table:")
 print(report)
 
 # Export the report to CSV
-report.to_csv("sales_summary.csv", index=False)
+report.to_csv("reports/sales_summary.csv", index=False)
 
 print("Sales Summary Report saved successfully!")
